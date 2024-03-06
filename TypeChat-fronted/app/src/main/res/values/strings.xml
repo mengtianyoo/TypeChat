@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TypeChat</string>
+    <string name="nickname">nickname</string>
+    <string name="email">Email</string>
+    <string name="gender">gender</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Password</string>
+    <string name="register">Register</string>
+    <string name="torregister">还没注册？</string>
+</resources>

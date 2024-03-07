@@ -48,7 +48,7 @@ public class ChatActivity extends AppCompatActivity {
 
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.58.132:5000")  // Replace with your Flask server IP
+                .baseUrl("http://123.57.181.11:5000")  // Replace with your Flask server IP
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

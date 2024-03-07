@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="cn.henu.typechat" />
+                  <option name="mobileSdkAppId" value="1:425217932058:android:fccee07654cda9668f0aa3" />
+                  <option name="projectId" value="typechat-1c3d4" />
+                  <option name="projectNumber" value="425217932058" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

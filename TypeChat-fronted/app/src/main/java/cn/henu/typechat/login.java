@@ -11,23 +11,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.GsonBuilder;
-
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import cn.henu.typechat.dto.ResponseDto;
-import cn.henu.typechat.service.ApiManager;
-import cn.henu.typechat.service.ApiResponseCallback;
-import cn.henu.typechat.service.UserService;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class login extends AppCompatActivity {
 
@@ -48,19 +31,29 @@ public class login extends AppCompatActivity {
 
         Button buttonLogin = findViewById(R.id.buttonLogin);
 
-
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String email = editTextEmail.getText().toString().trim();
-                String password = editTextPassword.getText().toString().trim();
-
-                Map<String, String> params = new HashMap<>();
-                params.put("email", email);
-                params.put("password", password);
-
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this,ChatActivity.class);
+                startActivity(intent);
             }
         });
+
+//        buttonLogin.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+////                String email = editTextEmail.getText().toString().trim();
+////                String password = editTextPassword.getText().toString().trim();
+////
+////                Map<String, String> params = new HashMap<>();
+////                params.put("email", email);
+////                params.put("password", password);
+//                Intent intent = new Intent(login.this, ChatActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
         toregister.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,13 +18,13 @@ public class ApiManager {
 
     private static final String BASE_URL = "http://192.168.58.132:9999/"; // 你的后端基础URL
 
-    private final ApiService apiService;
+    private final ApiService1 apiService;
 
     public ApiManager() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .build();
-        apiService = retrofit.create(ApiService.class);
+        apiService = retrofit.create(ApiService1.class);
     }
     public <T> void performRequest(String url, Map<String, String> data, final ApiResponseCallback<T> callback) {
         Call<ResponseBody> call = apiService.performRequest(url, data);

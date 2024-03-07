@@ -15,16 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.henu.typechat.dto.ResponseDto;
-import cn.henu.typechat.service.ApiManager;
-import cn.henu.typechat.service.ApiResponseCallback;
-import cn.henu.typechat.service.UserService;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class register extends AppCompatActivity {
 
@@ -67,6 +57,8 @@ public class register extends AppCompatActivity {
                 params.put("password1", password1);
                 params.put("password2", password2);
 
+                Intent intent = new Intent(register.this, login.class);
+                startActivity(intent);
 
             }
         });

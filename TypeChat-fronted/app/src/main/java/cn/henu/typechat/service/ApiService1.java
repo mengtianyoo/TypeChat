@@ -9,7 +9,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Url;
 
-public interface ApiService {
+public interface ApiService1 {
 
     @Headers("Content-Type: application/json")
     @POST

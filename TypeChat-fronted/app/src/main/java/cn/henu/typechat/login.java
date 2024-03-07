@@ -42,7 +42,10 @@ public class login extends AppCompatActivity {
                 // 获取用户输入的邮箱和密码
                 final String email = editTextEmail.getText().toString().trim();
                 final String password = editTextPassword.getText().toString().trim();
-
+                if (email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(login.this, "所有字段都是必填的", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // 查询Firebase Realtime Database中是否存在对应的用户信息
                 mDatabase.child("users").child(email.replace(".", "_")).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

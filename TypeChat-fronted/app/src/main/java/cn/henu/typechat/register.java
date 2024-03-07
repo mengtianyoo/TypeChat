@@ -55,7 +55,11 @@ public class register extends AppCompatActivity {
                 final String gender = editTextGender.getText().toString().trim();
                 String password = editTextPassword1.getText().toString().trim();
                 String password2 = editTextPassword2.getText().toString().trim();
-
+// 确保所有输入都不为空
+                if (email.isEmpty() || nickname.isEmpty() || gender.isEmpty() || password.isEmpty() || password2.isEmpty()) {
+                    Toast.makeText(register.this, "所有字段都是必填的", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // 简单的验证逻辑，确保密码一致
                 if (!password.equals(password2)) {
                     Toast.makeText(register.this, "两次输入的密码不一致", Toast.LENGTH_SHORT).show();

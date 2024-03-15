@@ -1,0 +1,21 @@
+package cn.henu.typechatbackend.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import cn.henu.typechatbackend.entity.Notice;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
+import org.springframework.stereotype.Repository;
+
+@Mapper
+@Repository
+public interface NoticeMapper extends BaseMapper<Notice> {
+    @Update("update db_notice " +
+            "set is_deleted=1 " +
+            "where id=#{id}")
+    void deleteNotice(String id);
+    @Update("update db_notice " +
+            "set is_read=1 " +
+            "where id=#{id}")
+    void checkNotice(String id);
+}

@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/ddchat/index")
+@RequestMapping("/typechat/index")
 public class indexController {
 
     @Resource

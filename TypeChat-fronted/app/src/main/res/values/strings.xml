@@ -7,4 +7,6 @@
     <string name="confirmpassword">Password</string>
     <string name="register">Register</string>
     <string name="torregister">还没注册？</string>
+    <string name="type_chat">Type Chat</string>
+    <string name="welcome_to_type_chat">welcome to type chat</string>
 </resources>

@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/ddchat/group")
+@RequestMapping("/typechat/group")
 public class GroupController {
     @Resource
     private MemberMapper memberMapper;

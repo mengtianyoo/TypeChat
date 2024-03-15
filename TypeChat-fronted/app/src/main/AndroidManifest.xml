@@ -21,13 +21,16 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
             android:name=".register"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".TypeChat"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

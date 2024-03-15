@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/ddchat/friend")
+@RequestMapping("/typechat/friend")
 public class FriendController {
 
     @Resource

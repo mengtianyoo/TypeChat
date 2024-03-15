@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/ddchat/user")
+@RequestMapping("/typechat/user")
 public class UserController {
 
     @Resource

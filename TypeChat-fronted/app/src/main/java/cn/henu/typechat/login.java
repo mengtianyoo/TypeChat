@@ -79,12 +79,9 @@ public class login extends AppCompatActivity {
 
         // 跳转到注册页面
         TextView toRegister = findViewById(R.id.toregister);
-        toRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(login.this, register.class);
-                startActivity(intent);
-            }
+        toRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(login.this, register.class);
+            startActivity(intent);
         });
     }
 }

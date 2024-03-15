@@ -10,11 +10,9 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface UserService {
-
-    @POST("/ddchat/index/login")
+    @POST("/typechat/index/login")
     Call<ResponseDto<JSONObject>> login(@Body Map<String, String> params);
-
-    @POST("/ddchat/index/register")
-    Call<ResponseDto<?>> register(@Body Map<String, String> params);
+    @POST("/typechat/index/register")
+    Call<ResponseDto<JSONObject>> register(@Body Map<String, String> params);
 }
 

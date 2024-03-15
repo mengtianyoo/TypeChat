@@ -29,6 +29,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".viewmodel.TypeChatLogin"
+            android:exported="false"/>
+        <activity android:name=".viewmodel.TypeChatHome"
+            android:exported="false"/>
+        <activity android:name=".viewmodel.TypeChatRegister"
+            android:exported="false"/>
         <activity
             android:name=".TypeChat"
             android:exported="true">

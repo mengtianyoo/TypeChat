@@ -5,8 +5,16 @@
     <string name="gender">gender</string>
     <string name="password">Password</string>
     <string name="confirmpassword">Password</string>
-    <string name="register">Register</string>
+    <string name="register">注册</string>
     <string name="torregister">还没注册？</string>
     <string name="type_chat">Type Chat</string>
     <string name="welcome_to_type_chat">welcome to type chat</string>
+    <string name="login">登录</string>
+    <string name="enterpwd">请输入密码</string>
+    <string name="enteremaiil">请输入邮箱</string>
+    <string name="entername">请输入昵称</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="againpwd">再次输入确认密码</string>
+    <string name="tologin">已经有账号？</string>
 </resources>

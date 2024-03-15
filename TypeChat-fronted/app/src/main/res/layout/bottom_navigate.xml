@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+    <LinearLayout
+        android:id="@+id/llhome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/bg_seclector_home"
+            tools:ignore="NestedWeights"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/tthome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消 息"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llline"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/bg_selector_table"
+            tools:ignore="NestedWeights"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/ttline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联 系 人"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llcontrast"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/cotrast"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/bg_selector_contrast"
+            tools:ignore="NestedWeights"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/ttcontrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我 的"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>

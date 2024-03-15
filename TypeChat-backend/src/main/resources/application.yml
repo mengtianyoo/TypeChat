@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://123.57.181.11:3306/typechatdb?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/typechatdb?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: Mengtianyu0909.
   servlet:
@@ -15,13 +15,11 @@ spring:
 # ????
 mybatis-plus:
   mapper-locations: classpath:/mybatis/*.xml
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #configuration:
+  #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 # ??????
 path:
-  image: D:\typechat\image\
-  video: D:\typechat\video\
-  audio: D:\typechat\audio\
-  file: D:\typechat\file\
-ip:
-  address: http://localhost/
+  image: /ddchat/image/
+  video: /ddchat/video/
+  audio: /ddchat/audio/
+  file: /ddchat/file/

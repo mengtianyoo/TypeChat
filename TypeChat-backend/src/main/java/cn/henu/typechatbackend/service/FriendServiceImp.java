@@ -1,8 +1,8 @@
 package cn.henu.typechatbackend.service;
 
+import cn.henu.typechatbackend.mapper.FriendMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import cn.henu.typechatbackend.entity.Friend;
-import cn.henu.typechatbackend.mapper.FriendMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

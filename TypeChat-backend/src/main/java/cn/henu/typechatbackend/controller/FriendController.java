@@ -1,7 +1,6 @@
 package cn.henu.typechatbackend.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import cn.henu.typechatbackend.controller.dto.ResponseDto;
 import cn.henu.typechatbackend.entity.Friend;
 import cn.henu.typechatbackend.mapper.FriendMapper;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import javax.annotation.Resource;
 import java.util.Map;

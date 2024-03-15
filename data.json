@@ -1,0 +1,522 @@
+{
+    "db_article": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "文章ID"
+            },
+            "user_id": {
+                "type": "bigint(20)",
+                "comment": "用户ID，对应于 db_user 集合中的 _id"
+            },
+            "authority": {
+                "type": "int(11)",
+                "comment": "权限"
+            },
+            "publish_time": {
+                "type": "bigint(20)",
+                "comment": "发布时间"
+            },
+            "content": {
+                "type": "varchar(650)",
+                "comment": "内容"
+            },
+            "img_list": {
+                "type": "text",
+                "comment": "图片列表"
+            },
+            "view_num": {
+                "type": "int(11)",
+                "comment": "浏览数"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_article_like": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "点赞记录ID"
+            },
+            "user_id": {
+                "type": "bigint(20)",
+                "comment": "用户ID，对应于 db_user 集合中的 _id"
+            },
+            "article_id": {
+                "type": "bigint(20)",
+                "comment": "文章ID，对应于 db_article 集合中的 _id"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_authority": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "权限ID"
+            },
+            "type": {
+                "type": "varchar(30)",
+                "comment": "权限类型"
+            },
+            "user_id": {
+                "type": "bigint(20)",
+                "comment": "用户ID，对应于 db_user 集合中的 _id"
+            },
+            "information": {
+                "type": "varchar(255)",
+                "comment": "权限相关的额外信息"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_comment": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "评论ID"
+            },
+            "article_id": {
+                "type": "bigint(20)",
+                "comment": "文章ID，对应于 db_article 集合中的 _id"
+            },
+            "user_id": {
+                "type": "bigint(20)",
+                "comment": "用户ID，对应于 db_user 集合中的 _id"
+            },
+            "content": {
+                "type": "varchar(100)",
+                "comment": "评论内容"
+            },
+            "publish_time": {
+                "type": "bigint(20)",
+                "comment": "发布时间"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_comment_like": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "点赞记录ID"
+            },
+            "user_id": {
+                "type": "bigint(20)",
+                "comment": "用户ID，对应于 db_user 集合中的 _id"
+            },
+            "comment_id": {
+                "type": "bigint(20)",
+                "comment": "评论ID，对应于 db_comment 集合中的 _id"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_group_message": {
+        "fields": {
+            "id": {
+                "type": "bigint(20)",
+                "comment": "消息ID"
+            },
+            "group_id": {
+                "type": "bigint(20)",
+                "comment": "群组ID，对应于 db_group 集合中的 _id"
+            },
+            "sender_id": {
+                "type": "bigint(20)",
+                "comment": "发送消息的用户ID，对应于 db_user 集合中的 _id"
+            },
+            "sender_name": {
+                "type": "varchar(255)",
+                "comment": "发送者的用户名"
+            },
+            "avatar": {
+                "type": "varchar(255)",
+                "comment": "发送者的头像链接"
+            },
+            "send_time": {
+                "type": "varchar(25)",
+                "comment": "消息发送时间"
+            },
+            "content": {
+                "type": "varchar(600)",
+                "comment": "消息内容"
+            },
+            "message_type": {
+                "type": "varchar(10)",
+                "comment": "消息类型"
+            },
+            "is_withdrawn": {
+                "type": "int(11)",
+                "comment": "是否已撤回"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_log": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "日志ID"
+            },
+            "type": {
+                "type": "varchar(30)",
+                "comment": "日志类型"
+            },
+            "user_id": {
+                "type": "bigint(20)",
+                "comment": "用户ID，对应于 db_user 集合中的 _id"
+            },
+            "information": {
+                "type": "varchar(255)",
+                "comment": "日志信息"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_member": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "成员ID"
+            },
+            "member_id": {
+                "type": "bigint(20)",
+                "comment": "成员用户ID，对应于 db_user 集合中的 _id"
+            },
+            "group_id": {
+                "type": "bigint(20)",
+                "comment": "群组ID，对应于 db_group 集合中的 _id"
+            },
+            "unread": {
+                "type": "int(11)",
+                "comment": "未读消息数"
+            },
+            "last_message": {
+                "type": "varchar(255)",
+                "comment": "最后一条消息内容"
+            },
+            "is_hidden": {
+                "type": "varchar(255)",
+                "comment": "是否隐藏成员"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            }
+        }
+    },
+    "db_notice": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "通知ID"
+            },
+            "sender_id": {
+                "type": "bigint(20)",
+                "comment": "发送者ID，对应于 db_user 集合中的 _id"
+            },
+            "receiver_id": {
+                "type": "bigint(20)",
+                "comment": "接收者ID，对应于 db_user 集合中的 _id"
+            },
+            "type": {
+                "type": "varchar(20)",
+                "comment": "通知类型"
+            },
+            "information": {
+                "type": "tinytext",
+                "comment": "通知内容"
+            },
+            "is_read": {
+                "type": "bit(1)",
+                "comment": "是否已读"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_group": {
+        "fields": {
+            "id": {
+                "type": "bigint(20)",
+                "comment": "群组ID"
+            },
+            "name": {
+                "type": "varchar(30)",
+                "comment": "群组名称"
+            },
+            "avatar": {
+                "type": "varchar(255)",
+                "comment": "群组头像链接"
+            },
+            "introduction": {
+                "type": "varchar(255)",
+                "comment": "群组简介"
+            },
+            "owner_id": {
+                "type": "bigint(20)",
+                "comment": "群主ID，对应于 db_user 集合中的 _id"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_message": {
+        "fields": {
+            "id": {
+                "type": "bigint(20)",
+                "comment": "消息ID"
+            },
+            "session_id": {
+                "type": "bigint(20)",
+                "comment": "会话ID，可能是私聊或群聊的会话ID"
+            },
+            "sender_id": {
+                "type": "bigint(20)",
+                "comment": "发送消息的用户ID，对应于 db_user 集合中的 _id"
+            },
+            "receiver_id": {
+                "type": "bigint(255)",
+                "comment": "接收消息的用户ID，对应于 db_user 集合中的 _id"
+            },
+            "send_time": {
+                "type": "varchar(25)",
+                "comment": "消息发送时间"
+            },
+            "content": {
+                "type": "varchar(600)",
+                "comment": "消息内容"
+            },
+            "message_type": {
+                "type": "varchar(10)",
+                "comment": "消息类型"
+            },
+            "is_withdrawn": {
+                "type": "int(11)",
+                "comment": "是否已撤回"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_user": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "用户ID"
+            },
+            "email": {
+                "type": "varchar(100)",
+                "comment": "用户邮箱"
+            },
+            "nickname": {
+                "type": "varchar(255)",
+                "comment": "用户昵称"
+            },
+            "avatar": {
+                "type": "varchar(255)",
+                "comment": "用户头像链接"
+            },
+            "password": {
+                "type": "varchar(255)",
+                "comment": "用户密码，应当使用安全的哈希算法存储"
+            },
+            "gender": {
+                "type": "int(11)",
+                "comment": "用户性别，0表示未知，1表示男性，2表示女性"
+            },
+            "background": {
+                "type": "varchar(255)",
+                "comment": "用户背景图片链接"
+            },
+            "birthday": {
+                "type": "datetime",
+                "comment": "用户生日"
+            },
+            "introduction": {
+                "type": "varchar(255)",
+                "comment": "用户介绍"
+            },
+            "is_activated": {
+                "type": "bit(1)",
+                "comment": "是否已激活"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    },
+    "db_friend": {
+        "fields": {
+            "id": {
+                "type": "bigint(20) UNSIGNED",
+                "comment": "好友关系ID"
+            },
+            "my_id": {
+                "type": "bigint(20)",
+                "comment": "我的用户ID，对应于 db_user 集合中的 _id"
+            },
+            "friend_id": {
+                "type": "bigint(20)",
+                "comment": "好友的用户ID，对应于 db_user 集合中的 _id"
+            },
+            "notation": {
+                "type": "varchar(30)",
+                "comment": "备注"
+            },
+            "session_id": {
+                "type": "bigint(20)",
+                "comment": "会话ID，对应于 db_message 集合中的 session_id"
+            },
+            "last_message": {
+                "type": "varchar(255)",
+                "comment": "最后一条消息内容"
+            },
+            "unread": {
+                "type": "int(11)",
+                "comment": "未读消息数"
+            },
+            "is_hidden": {
+                "type": "bit(1)",
+                "comment": "是否隐藏好友"
+            },
+            "create_time": {
+                "type": "datetime",
+                "comment": "创建时间"
+            },
+            "update_time": {
+                "type": "datetime",
+                "comment": "更新时间"
+            },
+            "is_deleted": {
+                "type": "bit(1)",
+                "comment": "是否已删除"
+            }
+        }
+    }
+}

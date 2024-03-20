@@ -3,7 +3,10 @@ package cn.henu.typechat;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,8 +33,9 @@ public class ChatActivity extends AppCompatActivity {
     private ChatAdapter chatAdapter;
     private List<Message> messages;
     private ApiService apiService;
+    private Button send;
+    private MessageDatabaseHelper messageDatabaseHelper;
     String currentTime = timeUtils.getCurrentTime();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,12 +58,51 @@ public class ChatActivity extends AppCompatActivity {
 
         // Create service interface instance
         apiService = retrofit.create(ApiService.class);
-    }
 
+        // Initialize MessageDatabaseHelper
+        messageDatabaseHelper = new MessageDatabaseHelper(this);
+
+        send = findViewById(R.id.buttonSendMessage);
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSendMessageClick(v);
+            }
+        });
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Load messages from SQLite database
+        loadMessagesFromDatabase();
+    }
+    private void loadMessagesFromDatabase() {
+        // Clear existing messages
+        messages.clear();
+
+        // Load messages from SQLite database
+        List<String> savedMessages = messageDatabaseHelper.getAllMessages();
+        boolean isCurrentUserMessage = true; // Track whether the current message is sent by the user or the server
+        for (String message : savedMessages) {
+            // Create Message objects from saved messages and add to the list
+            messages.add(new Message(message, isCurrentUserMessage, currentTime));
+            // Toggle between user and server messages
+            isCurrentUserMessage = !isCurrentUserMessage;
+        }
+
+        // Refresh RecyclerView
+        chatAdapter.notifyDataSetChanged();
+
+        // Scroll to the last message
+        recyclerViewChat.scrollToPosition(messages.size() - 1);
+    }
     public void onSendMessageClick(View view) {
         String messageContent = userInput.getText().toString();
         Message userMessage = new Message(messageContent, true, currentTime);
         messages.add(userMessage);
+
+        // Save message to SQLite database
+        messageDatabaseHelper.addMessage(messageContent);
 
         // Refresh RecyclerView
         chatAdapter.notifyDataSetChanged();
@@ -78,25 +121,28 @@ public class ChatActivity extends AppCompatActivity {
         call.enqueue(new Callback<ChatResponse>() {
             @Override
             public void onResponse(Call<ChatResponse> call, Response<ChatResponse> response) {
-
                 if (response.isSuccessful() && response.body() != null) {
                     // Handle the server response
                     String serverResponse = response.body().getAnswer();
                     Message serverMessage = new Message(serverResponse, false, currentTime);
                     messages.add(serverMessage);
 
+                    // Save server message to SQLite database
+                    messageDatabaseHelper.addMessage(serverResponse);
+
                     // Refresh RecyclerView
                     chatAdapter.notifyDataSetChanged();
 
                     // Scroll to the last message
                     recyclerViewChat.scrollToPosition(messages.size() - 1);
-                    Log.i("msgsssssss",response.toString());
                 } else {
                     // Handle the failed request
-                    Log.i("msgsssssss",response.toString());
                     String errorMessage = "Server Error";
                     Message errorServerMessage = new Message(errorMessage, false, currentTime);
                     messages.add(errorServerMessage);
+
+                    // Save error message to SQLite database
+                    messageDatabaseHelper.addMessage(errorMessage);
 
                     // Refresh RecyclerView
                     chatAdapter.notifyDataSetChanged();
@@ -113,6 +159,9 @@ public class ChatActivity extends AppCompatActivity {
 
                 Message errorServerMessage = new Message(errorMessage, false, currentTime);
                 messages.add(errorServerMessage);
+
+                // Save error message to SQLite database
+                messageDatabaseHelper.addMessage(errorMessage);
 
                 // Refresh RecyclerView
                 chatAdapter.notifyDataSetChanged();

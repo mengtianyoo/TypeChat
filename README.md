@@ -29,7 +29,7 @@ Creating "Type Chat" - a streamlined messaging app with core features: private c
 1. 
 2. 
 
-``ZiHari` ：
+``ZiHari`` ：
 
 1. 
 2. 

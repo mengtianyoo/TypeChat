@@ -37,10 +37,10 @@ public class TypeChatMessage extends Fragment {
         mViewModel = new ViewModelProvider(this).get(TypeChatMessageViewModel.class);
         // TODO: Use the ViewModel
         // Create an Intent to start ChatActivity
-        Intent intent = new Intent(getActivity(), ChatActivity.class);
+        //Intent intent = new Intent(getActivity(), ChatActivity.class);
 
         // Start ChatActivity
-        startActivity(intent);
+        //startActivity(intent);
     }
 
 }

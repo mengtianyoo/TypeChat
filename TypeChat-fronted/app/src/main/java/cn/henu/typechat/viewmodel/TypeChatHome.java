@@ -21,11 +21,13 @@ public class TypeChatHome extends AppCompatActivity implements View.OnClickListe
     private LinearLayout llhome, llcontrast, llline;
     private ImageView ivhome,  ivcontrast, ivline;
     private TextView tthome, ttcontrast, ttline;
-
+    private int userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.typechat_home);
+        //接受传递的数据
+        userId = getIntent().getIntExtra("userId",-1);
 
         initView();
         initEvent();
@@ -40,6 +42,8 @@ public class TypeChatHome extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.commit();
     }
     private void initEvent() {
+
+
         //添加fragment
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
@@ -79,6 +83,9 @@ public class TypeChatHome extends AppCompatActivity implements View.OnClickListe
             ivline.setSelected(true);
             ttline.setTextColor(getColor(R.color.greens));
         } else if (id == R.id.llcontrast) {
+            Bundle bundle = new Bundle();
+            bundle.putInt("userId", userId);
+            profileFragment.setArguments(bundle);
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container, profileFragment).commit();

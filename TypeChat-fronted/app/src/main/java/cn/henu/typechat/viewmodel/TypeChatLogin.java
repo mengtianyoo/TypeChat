@@ -66,9 +66,8 @@ public class TypeChatLogin extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             DataModel data = response.body();
                             if (data != null && data.isSuccess()) {
-                                // 登录成功，跳转到主界面
                                 Log.d("TypeChatLogin", "Login success: " + new Gson().toJson(data.getData().getUserinfo().getEmail()));
-                                navigateToMainActivity();
+                                navigateToMainActivity(data);
                             } else {
                                 // 登录失败，显示错误消息
                                 Toast.makeText(TypeChatLogin.this, data.getMessage(), Toast.LENGTH_SHORT).show();
@@ -89,11 +88,11 @@ public class TypeChatLogin extends AppCompatActivity {
             }
         });
     }
-    private void navigateToMainActivity() {
+    private void navigateToMainActivity(DataModel data) {
         // 示例代码：跳转到主界面
         Intent intent = new Intent(TypeChatLogin.this, TypeChatHome.class);
         // 如果需要传递用户信息或令牌到 MainActivity，可以使用 Intent.putExtra() 方法
-        intent.putExtra("userInfo", new Gson().toJson(userInfo));
+        intent.putExtra("userId", data.getData().getUserinfo().getId());
         startActivity(intent);
         // 关闭当前登录界面
         finish();

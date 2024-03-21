@@ -13,22 +13,13 @@
         android:layout_marginTop="10dp"
         android:padding="15dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:fontFamily="@font/poppinsbold"
-            android:layout_gravity="center"
-            android:textColor="@color/black"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:orientation="horizontal">
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="20dp">
@@ -36,98 +27,81 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:layout_marginTop="0dp"
                     android:padding="15dp">
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:id="@+id/avatr"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:src="@drawable/avtar"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="top"
                         android:layout_marginTop="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp">
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="gloomy"
-                            android:textAlignment="center"
-                            android:textSize="20sp"
-                            android:fontFamily="@font/poppinsmedium"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"/>
+                            android:orientation="horizontal"
+                            android:layout_marginTop="0dp">
+                            <TextView
+                                android:id="@+id/nickname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="gloomy"
+                                android:textAlignment="center"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
 
-                        <com.airbnb.lottie.LottieAnimationView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="1dp"
-                            android:layout_marginStart="3dp"
-                            app:lottie_rawRes="@raw/verified"
-                            app:lottie_autoPlay="true"
-                            app:lottie_loop="true"
-                            tools:ignore="MissingClass" />
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginStart="3dp"
+                                app:lottie_rawRes="@raw/verified"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                tools:ignore="MissingClass" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ID:  "
+                                android:textAlignment="center"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1234567890"
+                                android:textAlignment="center"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
 
                     </LinearLayout>
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_marginTop="20dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="0dp"
-                    android:padding="15dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/avtar"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="gloomy"
-                            android:textAlignment="center"
-                            android:textSize="20sp"
-                            android:fontFamily="@font/poppinsmedium"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"/>
-
-                        <com.airbnb.lottie.LottieAnimationView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="1dp"
-                            android:layout_marginStart="3dp"
-                            app:lottie_rawRes="@raw/verified"
-                            app:lottie_autoPlay="true"
-                            app:lottie_loop="true"
-                            tools:ignore="MissingClass" />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
 
@@ -158,6 +132,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
+                        android:id="@+id/instruction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
@@ -195,7 +170,7 @@
                         android:textColor="@color/black"
                         android:text="@string/user_information"
                         android:fontFamily="@font/poppinsmedium"
-                        android:textSize="15sp"
+                        android:textSize="20sp"
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                 </RelativeLayout>
@@ -216,6 +191,7 @@
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                     <TextView
+                        android:id="@+id/nickname2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
@@ -242,10 +218,11 @@
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                     <TextView
+                        android:id="@+id/gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="@string/male"
+                        android:text="男"
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -268,10 +245,11 @@
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                     <TextView
+                        android:id="@+id/age"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="@string/_21"
+                        android:text="21"
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -294,6 +272,7 @@
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                     <TextView
+                        android:id="@+id/dob"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
@@ -320,6 +299,7 @@
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                     <TextView
+                        android:id="@+id/mail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
@@ -381,14 +361,14 @@
                         android:layout_height="100dp"
                         app:lottie_loop="true"
                         app:lottie_autoPlay="true"
-                        app:lottie_rawRes="@raw/linkedin"/>
+                        app:lottie_rawRes="@raw/youtube"/>
 
                     <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         app:lottie_loop="true"
                         app:lottie_autoPlay="true"
-                        app:lottie_rawRes="@raw/whatsapp"/>
+                        app:lottie_rawRes="@raw/gmail"/>
 
                 </GridLayout>
             </LinearLayout>

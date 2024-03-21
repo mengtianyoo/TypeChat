@@ -3,13 +3,14 @@ Creating "Type Chat" - a streamlined messaging app with core features: private c
 
 ## 项目开发进度记录
 
-| 三月五号   | 第一次创建仓库，确定项目主题完善[开题报告](https://pv7r614tfw8.feishu.cn/docx/JQSsdprmloQR0ixzqACcYLkPnff) . |
-| ---------- | ------------------------------------------------------------ |
-| 三月七号   | 实现AI聊天功能、以及作为备用[Fire Base ](https://console.firebase.google.com/project/typechat-1c3d4/database/typechat-1c3d4-default-rtdb/data?hl=zh-cn) 的后端数据库的实现 |
-| 三月十五号 | 实现后端打jar包，部署到服务器上，可进行远程访问              |
-| 三月十六号 | 首次实现前后端数据交互，但仅有登录注册功能                   |
-| ……         | ……                                                           |
-|            |                                                              |
+| 三月五号     | 第一次创建仓库，确定项目主题完善[开题报告](https://pv7r614tfw8.feishu.cn/docx/JQSsdprmloQR0ixzqACcYLkPnff) . |
+| ------------ | ------------------------------------------------------------ |
+| 三月七号     | 实现AI聊天功能、以及作为备用[Fire Base ](https://console.firebase.google.com/project/typechat-1c3d4/database/typechat-1c3d4-default-rtdb/data?hl=zh-cn) 的后端数据库的实现 |
+| 三月十五号   | 实现后端打jar包，部署到服务器上，可进行远程访问              |
+| 三月十六号   | 首次实现前后端数据交互，但仅有登录注册功能                   |
+| 三月二十一号 | 添加个人信息请求功能、从服务器获取数据，并编写图片上传类文件 |
+| ……           | ……                                                           |
+|              |                                                              |
 
 ## 项目的技术掌握程度
 
@@ -39,4 +40,12 @@ Creating "Type Chat" - a streamlined messaging app with core features: private c
 
 
 too many bugs to record them all .
+
+
+
+## 一些难懂的原理
+
+![upload原理](upload原理.jpg)
+
+
 

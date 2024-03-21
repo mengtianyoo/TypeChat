@@ -19,7 +19,7 @@ mybatis-plus:
   #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 # ??????
 path:
-  image: /ddchat/image/
-  video: /ddchat/video/
-  audio: /ddchat/audio/
-  file: /ddchat/file/
+  image: D:/ddchat/image/
+  video: D:/ddchat/video/
+  audio: D:/ddchat/audio/
+  file: D:/ddchat/file/

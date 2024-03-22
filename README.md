@@ -49,3 +49,8 @@ too many bugs to record them all .
 
 
 
+在Android 10及以上版本中，Google引入了一个新的存储模型，称为分区存储，它增加了对应用访问设备存储的限制。在分区存储模型中，应用只能直接访问它们自己的应用特定目录和媒体文件。对于其他目录，如/storage/emulated/0/Pictures/Twitter/，应用需要使用MediaStore API或者存储访问框架（Storage Access Framework，SAF）。
+
+
+
+You cannot start a load on a not yet attached View or a Fragment where getActivity() returns null (which usually occurs when getActivity() is called before the Fragment is attached or after the Fragment is destroyed).

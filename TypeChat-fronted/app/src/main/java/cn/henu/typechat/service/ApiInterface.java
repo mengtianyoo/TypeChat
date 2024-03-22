@@ -32,6 +32,9 @@ public interface ApiInterface {
     Call<DataModelInfo> getInfo(@Body User user);
 
     @Multipart
-    @POST("/typechat/image/upload")
+    @POST("/typechat/image/uploadAvatar")
     Call<UploadResponse> uploadImage(@Part MultipartBody.Part image, @PartMap Map<String, RequestBody> userId);
+
+    @POST("/typechat/user/update")
+    Call<User> updateUser(@Body User user);
 }

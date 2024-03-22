@@ -6,9 +6,9 @@ import java.util.Date;
 
 public class User {
     @SerializedName("birthday")
-    private long birthday;
+    private String birthday;
     @SerializedName("gender")
-    private int gender;
+    private Integer gender;
     @SerializedName("createTime")
     private long createTime;
     @SerializedName("background")
@@ -28,19 +28,19 @@ public class User {
     public User() {}
 
     // Getters and setters
-    public long getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(long birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
-    public int getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 

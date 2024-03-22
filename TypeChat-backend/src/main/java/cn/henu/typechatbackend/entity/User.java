@@ -26,7 +26,7 @@ public class User extends BaseEntity{
     private Integer gender;
     private String password;
     private String background; //背景图
-    @JsonFormat(pattern = "yyyy-mm-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
     private String introduction; //介绍
     private Boolean isActivated; //是否被激活

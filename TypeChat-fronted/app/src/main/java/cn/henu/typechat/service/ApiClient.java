@@ -8,18 +8,21 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static Retrofit getClient() {
+    private static final String BASE_URL = "http://192.168.108.132:9999";
 
+    public static Retrofit getClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-
         return new Retrofit.Builder()
-                .baseUrl("http://123.57.181.11:9999")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
     }
 
+    public static String getBaseUrl() {
+        return BASE_URL;
+    }
 }

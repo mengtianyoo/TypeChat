@@ -1,6 +1,7 @@
 package cn.henu.typechat.viewmodel;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -89,12 +90,16 @@ public class TypeChatLogin extends AppCompatActivity {
         });
     }
     private void navigateToMainActivity(DataModel data) {
-        // 示例代码：跳转到主界面
+        // Save user info to SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("user_info", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("userId", data.getData().getUserinfo().getId());
+        editor.apply();
+
+        // Navigate to MainActivity
         Intent intent = new Intent(TypeChatLogin.this, TypeChatHome.class);
-        // 如果需要传递用户信息或令牌到 MainActivity，可以使用 Intent.putExtra() 方法
         intent.putExtra("userId", data.getData().getUserinfo().getId());
         startActivity(intent);
-        // 关闭当前登录界面
         finish();
     }
 }

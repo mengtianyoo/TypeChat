@@ -55,7 +55,7 @@ public class TypeChatRegister extends AppCompatActivity {
             String confirmPassword = confirmPasswordEditText.getText().toString();
             String nickname = nicknameEditText.getText().toString();
             int selceted = gendergroup.getCheckedRadioButtonId();
-            String gender = selceted == R.id.radioButtonMale ? "男" : "女";
+            String gender = selceted == R.id.radioButtonMale ?  "女": "男";
 
             RegisterRequest registerRequest = new RegisterRequest();
             registerRequest.setEmail(email);

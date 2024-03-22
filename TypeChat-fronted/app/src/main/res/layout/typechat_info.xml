@@ -24,7 +24,7 @@
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="20dp">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -38,12 +38,14 @@
                         android:layout_gravity="center"
                         android:src="@drawable/avtar"/>
                     <LinearLayout
+                        android:id="@+id/infolayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/avatr"
                         android:layout_gravity="top"
                         android:layout_marginTop="15dp"
                         android:orientation="vertical"
-                        android:layout_marginStart="30dp">
+                        android:layout_marginStart="20dp">
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -88,7 +90,7 @@
                                 android:id="@+id/id"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1234567890"
+                                android:text="12345"
                                 android:textAlignment="center"
                                 android:textSize="20sp"
                                 android:fontFamily="@font/poppinsmedium"
@@ -97,7 +99,18 @@
 
                     </LinearLayout>
 
-                </LinearLayout>
+                    <Button
+                        android:id="@+id/update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="0dp"
+                        android:text="修   改" />
+
+                </RelativeLayout>
+
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -127,7 +140,7 @@
                         android:textColor="@color/black"
                         android:text="@string/about"
                         android:fontFamily="@font/poppinsmedium"
-                        android:textSize="15sp"
+                        android:textSize="20sp"
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
 
@@ -337,7 +350,7 @@
                         android:textColor="@color/black"
                         android:text="@string/social_media"
                         android:fontFamily="@font/poppinsmedium"
-                        android:textSize="15sp"
+                        android:textSize="20sp"
                         android:layout_alignParentStart="true"
                         android:textStyle="bold"/>
                 </RelativeLayout>
@@ -374,6 +387,15 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退     出"
+            android:id="@+id/logout"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
 
 
     </LinearLayout>

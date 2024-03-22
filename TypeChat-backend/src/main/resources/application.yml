@@ -1,11 +1,13 @@
 server:
+  tomcat:
+    basedir: /home/chat
   port: 9999
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/typetest?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/typechatdb?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
-    password: 200209
+    password: Mengtianyu0909.
   servlet:
     multipart:
       enabled: true
@@ -18,8 +20,13 @@ mybatis-plus:
     #configuration:
   #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 # ??????
+#path:
+#  image: D:/ddchat/image/
+#  video: D:/ddchat/video/
+#  audio: D:/ddchat/audio/
+#  file: D:/ddchat/file/
 path:
-  image: D:/ddchat/image/
-  video: D:/ddchat/video/
-  audio: D:/ddchat/audio/
-  file: D:/ddchat/file/
+  image: ddchat/image/
+  video: ddchat/video/
+  audio: ddchat/audio/
+  file: ddchat/file/

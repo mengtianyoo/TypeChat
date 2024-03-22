@@ -36,7 +36,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/avtar"/>
+                        android:src="@color/white"/>
                     <LinearLayout
                         android:id="@+id/infolayout"
                         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                                 android:id="@+id/nickname"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="gloomy"
+                                android:text=""
                                 android:textAlignment="center"
                                 android:textSize="20sp"
                                 android:fontFamily="@font/poppinsmedium"
@@ -90,7 +90,7 @@
                                 android:id="@+id/id"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="12345"
+                                android:text=""
                                 android:textAlignment="center"
                                 android:textSize="20sp"
                                 android:fontFamily="@font/poppinsmedium"
@@ -150,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:textColor="@color/black"
-                        android:text="@string/bio"
+                        android:text=""
                         android:fontFamily="@font/poppinsregular"
                         android:textSize="15sp"
                         android:layout_alignParentStart="true" />
@@ -208,7 +208,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="gloomy"
+                        android:text=""
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -235,7 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="男"
+                        android:text=""
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -262,7 +262,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="21"
+                        android:text=""
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -289,7 +289,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="09/09/2002"
+                        android:text=""
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -316,7 +316,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#6E6C6C"
-                        android:text="@string/axxxxxxa_gmail_com"
+                        android:text=""
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="15sp"
                         android:layout_alignParentEnd="true"
@@ -326,67 +326,68 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            app:cardCornerRadius="10dp">
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            app:cardCornerRadius="10dp">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="15dp">
+<!--            <LinearLayout-->
+<!--                android:layout_width="383dp"-->
+<!--                android:layout_height="172dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="@string/social_media"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:textSize="20sp"
-                        android:layout_alignParentStart="true"
-                        android:textStyle="bold"/>
-                </RelativeLayout>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp">-->
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:useDefaultMargins="true"
-                    android:rowCount="1"
-                    android:columnCount="3">
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:fontFamily="@font/poppinsmedium"-->
+<!--                        android:text="@string/social_media"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                </RelativeLayout>-->
 
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:lottie_loop="true"
-                        app:lottie_autoPlay="true"
-                        app:lottie_rawRes="@raw/twitter"/>
+<!--                <GridLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:columnCount="3"-->
+<!--                    android:rowCount="1"-->
+<!--                    android:useDefaultMargins="true">-->
 
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:lottie_loop="true"
-                        app:lottie_autoPlay="true"
-                        app:lottie_rawRes="@raw/youtube"/>
+<!--                    <com.airbnb.lottie.LottieAnimationView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        app:lottie_autoPlay="true"-->
+<!--                        app:lottie_loop="true"-->
+<!--                        app:lottie_rawRes="@raw/twitter" />-->
 
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:lottie_loop="true"
-                        app:lottie_autoPlay="true"
-                        app:lottie_rawRes="@raw/gmail"/>
+<!--                    <com.airbnb.lottie.LottieAnimationView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        app:lottie_autoPlay="true"-->
+<!--                        app:lottie_loop="true"-->
+<!--                        app:lottie_rawRes="@raw/youtube" />-->
 
-                </GridLayout>
-            </LinearLayout>
+<!--                    <com.airbnb.lottie.LottieAnimationView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        app:lottie_autoPlay="true"-->
+<!--                        app:lottie_loop="true"-->
+<!--                        app:lottie_rawRes="@raw/gmail" />-->
 
-        </com.google.android.material.card.MaterialCardView>
+<!--                </GridLayout>-->
+<!--            </LinearLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
 
         <Button
             android:layout_width="wrap_content"

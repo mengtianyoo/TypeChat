@@ -37,7 +37,6 @@ public class ImageUploadUtil {
     private Retrofit mRetrofit;
     ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
-
     public void uploadImage(String filePath, int userId, UpdateUserInfoActivity activity) {
         // 检查是否已经具有权限
         final String imageurl = null;

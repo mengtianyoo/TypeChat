@@ -32,7 +32,7 @@ Creating "Type Chat" - a streamlined messaging app with core features: private c
 
 ``ZiHari`` ：
 
-1. 
+1. 太难了
 2. 
 
 ## 项目开发中的Bug Log

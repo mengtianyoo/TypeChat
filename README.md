@@ -25,15 +25,6 @@ Creating "Type Chat" - a streamlined messaging app with core features: private c
 7. 基本掌握retrofit2的使用，能够实现Json的交互
 8. ……
 
-``YoumiyaHina`` ：
-
-1. 
-2. 
-
-``ZiHari`` ：
-
-1. 太难了
-2. 
 
 ## 项目开发中的Bug Log
 
